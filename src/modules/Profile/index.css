@@ -1,0 +1,6 @@
+.LeftContent{
+    align-items: flex-start;
+}
+.RightContent{
+    align-content: right;
+}

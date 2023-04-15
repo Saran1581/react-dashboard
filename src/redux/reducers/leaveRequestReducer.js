@@ -9,7 +9,7 @@ const LeaveRequestReducer = (state = initState, action) => {
     case "REMOVE":
       return { ...state, number: state.number - 1 };
     default:
-      return leave;
+      return initState;
   }
 };
 

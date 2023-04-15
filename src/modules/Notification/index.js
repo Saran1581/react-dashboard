@@ -1,14 +1,20 @@
 import React from "react";
-import { Card } from "antd";
+import { Card, Calendar } from "antd";
+
+// import { Calendar } from 'antd';
+
 
 const Notification = () => {
   const approve = () => {};
   const deny = () => {};
+    const onPanelChange = (value, mode) => {
+      console.log(value.format('YYYY-MM-DD'), mode);
+    }
   return (
     <div className="site-card-border-less-wrapper">
-      <Card title="HR MANAGER" bordered={false} style={{ width: 1000 }}>
+      <Card title="NOTIFICATION" bordered={false} style={{ width: 1000 }}>
         <p>
-          We need to hire a new employees for our FULL STACK DEVELOPMENT TEAM
+          Accenture is requesting for on campus
         </p>
         <br />
         <button
@@ -32,11 +38,11 @@ const Notification = () => {
         </button>
       </Card>
       <Card
-        title="HR EXECUTIVE"
+        title="NOTIFICATION"
         bordered={false}
         style={{ width: 1000, marginTop: 20 }}
       >
-        <p>We need to hire a new employees for our DevOps Team</p>
+        <p>Zoho requesting for on campus</p>
         <br />
         <button
           style={{
@@ -59,7 +65,9 @@ const Notification = () => {
         >
           DENIED
         </button>
-      </Card>
+      </Card> <br /><br />
+      <Calendar onPanelChange={onPanelChange} />
+
     </div>
   );
 };

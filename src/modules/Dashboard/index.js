@@ -23,121 +23,97 @@ const Dashboard = () => {
     console.log("click", e);
   };
 
-  const menu = (
-    <Menu onClick={handleMenuClick}>
-      <Menu.Item key="1">Projects Active</Menu.Item>
-      <Menu.Item key="2">Projects completed</Menu.Item>
-    </Menu>
-  );
+  // const menu = (
+  //   <Menu onClick={handleMenuClick}>
+  //     <Menu.Item key="1">Projects Active</Menu.Item>
+  //     <Menu.Item key="2">Projects completed</Menu.Item>
+  //   </Menu>
+  // );
   return (
     <div
       className="site-card-border-less-wrapper"
       style={{ display: "flex", flexWrap: "wrap" }}
     >
       <Card
-        title="Human Resource"
+        title="IT"
         bordered={false}
         style={{ width: 250, height: 300, margin: "auto" }}
       >
-        <p>Managers - 2</p> <p>Executives - 7</p>{" "}
+        <p>BOYS - 40</p> <p>GIRLS - 13</p>{" "}
         <p>
-          <b>Total - 9</b>
+          <b>Total - 53</b>
         </p>
         <div>
-          <Tooltip title="2 HR MANAGERS">
-            <Progress percent={Calc(9, 2)} success={{ percent: Calc(9, 2) }} />
+          <Tooltip title="BOYS">
+            <Progress percent={Calc(53, 40)} success={{ percent: Calc(53, 40) }} />
           </Tooltip>
 
-          <Tooltip title="8 HR EXECUTIVES">
-            <Progress percent={Calc(9, 7)} success={{ percent: Calc(9, 7) }} />
+          <Tooltip title="GIRLS">
+            <Progress percent={Calc(53, 13)} success={{ percent: Calc(53, 13) }} />
           </Tooltip>
         </div>
       </Card>
       <Card
-        title="Engineering"
+        title="IT"
         bordered={false}
         style={{ width: 250, height: 300, margin: "auto" }}
       >
-        <p>Managers - 4</p> <p>Team Leads - 8</p> <p>Engineers - 45 </p>
+        <p>PLACEMENT STUDENTS - 50</p> <p>NON-PLACEMENT STUDENTS - 3</p>
         <p>
-          <b>Total - 64 </b>
+          <b>Total - 53 </b>
         </p>
         <div>
-          <Tooltip title="4 MANAGERS">
+          <Tooltip title="PLACEMENT STUDENTS">
             <Progress
-              percent={Calc(64, 4)}
-              success={{ percent: Calc(64, 4) }}
+              percent={Calc(53, 50)}
+              success={{ percent: Calc(53,50) }}
             />
           </Tooltip>
 
-          <Tooltip title="8 TEAM LEAD">
+          <Tooltip title="NON-PLACEMENT STUDENTS">
             <Progress
-              percent={Calc(64, 8)}
-              success={{ percent: Calc(64, 8) }}
-            />
-          </Tooltip>
-
-          <Tooltip title="45 ENGINEERS">
-            <Progress
-              percent={Calc(64, 45)}
-              success={{ percent: Calc(64, 45) }}
+              percent={Calc(53, 3)}
+              success={{ percent: Calc(53, 3) }}
             />
           </Tooltip>
         </div>
       </Card>
       <Card
-        title="Devops"
+        title="IT"
         bordered={false}
         style={{ width: 250, height: 300, margin: "auto" }}
       >
-        <p>Managers - 2</p> <p>Team Leads - 3</p> <p>Engineers - 14 </p>
+        <p>PLACED - 48</p> <p>NON-PLACED - 2</p> 
         <p>
-          <b>Total - 26</b>
+          <b>Total - 50</b>
         </p>
         <div>
-          <Tooltip title="2 MANAEGRS">
+          <Tooltip title="PLACED">
             <Progress
-              percent={Calc(26, 2)}
-              success={{ percent: Calc(26, 2) }}
+              percent={Calc(50, 48)}
+              success={{ percent: Calc(50, 48) }}
             />
           </Tooltip>
 
-          <Tooltip title="3 TEAM LEADS">
+          <Tooltip title="NON PLACED">
             <Progress
-              percent={Calc(26, 3)}
-              success={{ percent: Calc(26, 3) }}
-            />
-          </Tooltip>
-
-          <Tooltip title="14 ENGINEERS">
-            <Progress
-              percent={Calc(26, 14)}
-              success={{ percent: Calc(26, 14) }}
+              percent={Calc(50, 2)}
+              success={{ percent: Calc(50, 2) }}
             />
           </Tooltip>
         </div>
       </Card>
       <Card
-        title="Customer Support"
+        title="IT"
         bordered={false}
         style={{ width: 250, height: 300, margin: "auto" }}
       >
-        <p>Managers - 4</p> <p>Executives - 8</p>
-        <p>
-          <b>Total - 12</b>
-        </p>
+        <p>OVERALL - 48/50</p>
         <div>
-          <Tooltip title="4 MANAGERS">
+          <Tooltip title="OVERALL">
             <Progress
               percent={Calc(12, 4)}
-              success={{ percent: Calc(12, 4) }}
-            />
-          </Tooltip>
-
-          <Tooltip title="8 EXECUTIVES">
-            <Progress
-              percent={Calc(12, 8)}
-              success={{ percent: Calc(12, 8) }}
+              success={{ percent: Calc(50, 48) }}
             />
           </Tooltip>
         </div>
@@ -149,27 +125,25 @@ const Dashboard = () => {
         bordered={false}
         style={{ width: 1100, marginTop: 40, marginLeft: 30 }}
       >
-        <h4>Team 1 progress:</h4>
-        <Progress percent={80} steps={8} />
+        <h4>2018 - 2022:</h4>
+        <Progress percent={80} steps={7} />
         <br />
-        <h4>Team 2 progress:</h4>
-        <Progress percent={30} steps={3} />
-        <br />
-        <h4>Team 3 progress:</h4>
-        <Progress percent={100} steps={10} strokeColor="#52c41a" />
+        <h4>2019 - 2023:</h4>
+        <Progress percent={90} steps={9} />
+
       </Card>
 
-      <div className="site-card-border-less-wrapper">
-        <Card
-          title="PROJECTS"
-          bordered={false}
-          style={{ width: 1100, marginTop: 40 }}
-        >
-          <Dropdown overlay={menu}>
-            <Button>Project</Button>
-          </Dropdown>
-        </Card>
-      </div>
+        {/* <div className="site-card-border-less-wrapper">
+          <Card
+            title="PROJECTS"
+            bordered={false}
+            style={{ width: 1100, marginTop: 40 }}
+          >
+            <Dropdown overlay={menu}>
+              <Button>Project</Button>
+            </Dropdown>
+          </Card>
+        </div> */}
     </div>
   );
 };

@@ -43,19 +43,19 @@ const SideMenu = ({ collapse, setContent }) => {
         <Menu.Item key="dashboard" icon={<PieChartOutlined />}>
           Dashboard
         </Menu.Item>
-        <Menu.Item key="user" icon={<UserOutlined />}>
-          User
-        </Menu.Item>
-        <Menu.Item key="Profile" icon={<DesktopOutlined />}>
+        <Menu.Item key="profile" icon={<UserOutlined />}>
           Profile
         </Menu.Item>
+        <Menu.Item key="user" icon={<DesktopOutlined />}>
+          StudentUser
+        </Menu.Item>
         <Menu.Item key="LeaveRequest" icon={<UserOutlined />}>
-          LeaveRequest
+          CompanyList
         </Menu.Item>
         <Menu.Item key="notification" icon={<InfoCircleOutlined />}>
           Notification
         </Menu.Item>
-        <Menu.Item key="3" icon={<MinusCircleOutlined />}>
+        <Menu.Item key="logout" icon={<MinusCircleOutlined />}>
           Logout
         </Menu.Item>
       </Menu>

@@ -112,7 +112,7 @@ const Dashboard = () => {
         <div>
           <Tooltip title="OVERALL">
             <Progress
-              percent={Calc(12, 4)}
+              percent={Calc(50, 48)}
               success={{ percent: Calc(50, 48) }}
             />
           </Tooltip>
